@@ -20,37 +20,172 @@ h1, h2 {
 
 /* NAVIGATION */
 
-header nav {
+.site-header{
+
     position: fixed;
     top: 0;
+    left: 0;
     width: 100%;
-    padding: 40px 60px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    z-index: 10;
+    z-index: 100;
+    transition:
+        background-color .35s ease,
+        backdrop-filter .35s ease;
+
+}
+
+header nav{
+
+    width: 100%;
+    padding: 16px 60px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    transition:padding .35s ease;
+
+}
+
+.site-header.scrolled{
+
+    background:rgba(10,10,10,.18);
+    backdrop-filter:blur(6px);
+    -webkit-backdrop-filter:blur(6px);
+
+}
+
+.site-header.scrolled nav{
+
+    padding: 16px 30px;
+
 }
 
 .logo img {
-    width: 140px;
-    height: auto;
+    width: auto;
+    height: 50px;
 }
 
 .nav-links {
     display: flex;
-    gap: 35px;
+    gap: 15px;
 }
 
 .nav-links a {
+
+    position: relative;
+
+    display: inline-block;
+
+    padding: 6px 0;
+
     color: var(--accent-color);
     text-decoration: none;
     font-size: 14px;
     font-weight: 300;
-    letter-spacing: .5px;
+    letter-spacing: 0.5px;
+
 }
 
-nav {
-    z-index: 10;
+.nav-links a::after{
+
+    content:"";
+    position:absolute;
+    left:0;
+    bottom:-6px;
+    width:0;
+    height:1px;
+    background:var(--accent-color);
+    transition:width .3s ease;
+
+}
+
+.nav-links a:hover::after{
+
+    width:100%;
+
+}
+
+/* HAMBURGER */
+
+.menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.menu-toggle span {
+    display: block;
+    width: 25px;
+    height: 1px;
+    background: var(--accent-color);
+    margin: 6px 0;
+}
+
+
+/* MOBILE */
+
+@media (max-width:768px) {
+
+    header nav{
+    padding:20px 18px;  
+    }
+
+    .logo img {
+        width: 110px;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    .nav-links {
+        position: absolute;
+        top: 90px;
+        left: 0;
+        width: 100%;
+        background: #0a0a0a;
+        flex-direction: column;
+        align-items: center;
+        gap: 25px;
+        padding: 40px 0;
+
+        display: none;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .nav-links a {
+        font-size: 14px;
+    }
+
+    .hero h1 {
+    font-size: 52px;
+    line-height: 0.95;
+    letter-spacing: -1px;
+
+    .hero p {
+    font-size: 13px;
+    letter-spacing: 1.5px;
+    }
+
+    .hero {
+        padding: 0 24px;
+        background-image:
+        linear-gradient(
+            rgba(0,0,0,.82),
+            rgba(0,0,0,.45),
+            rgba(0,0,0,.78)
+        ),
+        url("../images/hero.jpg");
+    }
+
+    .hero-content{
+        transform: translateY(50px);
+    }
+
+}
+
 }
 
 /* HERO */
@@ -76,11 +211,12 @@ nav {
 }
 
     .hero h1 {
-        font-size: clamp(65px, 10vw, 130px);
+        font-size: clamp(70px, 10vw, 140px);
         letter-spacing: -1px;
         font-weight: 400;
         line-height: 1;
         text-transform: none;
+
     }
 
     .hero p{
@@ -160,11 +296,24 @@ nav {
 
 }
 
+.actress-image{
+
+    overflow:hidden;
+
+}
+
 .actress-image img {
 
     width:220px;
     height:330px;
     object-fit:cover;
+     transition:transform .6s ease;
+
+}
+
+.actress-image:hover img{
+
+    transform:scale(1.04);
 
 }
 
@@ -318,26 +467,5 @@ footer {
 .footer-links a:hover {
 
     color:var(--accent-color);
-
-}
-
-/*FOR PHONES*/
-@media (max-width:768px) {
-
-    nav {
-        padding:25px;
-    }
-
-    .nav-links {
-        gap:15px;
-    }
-
-    .actress-section {
-        flex-direction:column;
-    }
-
-    .projects-grid {
-        grid-template-columns:1fr;
-    }
 
 }
