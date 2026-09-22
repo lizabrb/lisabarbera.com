@@ -723,6 +723,225 @@ html {
     text-align: right;
     color: rgba(242, 242, 242, .5);
 }
+
+/* =========================================
+   PROJECT PITCH-DECK PAGES (anniversary.html, etc.)
+   ========================================= */
+ 
+.back-link {
+    display: inline-block;
+    margin-bottom: 24px;
+    color: var(--accent-color);
+    text-decoration: none;
+    font-size: 13px;
+    letter-spacing: .5px;
+    transition: opacity .3s ease;
+}
+ 
+.back-link:hover {
+    opacity: .65;
+}
+ 
+/* HERO */
+ 
+.project-hero {
+    position: relative;
+    min-height: 90vh;
+    display: flex;
+    align-items: flex-end;
+    background-size: cover;
+    background-position: center;
+    padding: 0 60px 80px;
+}
+ 
+.project-hero::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top, rgba(0,0,0,.92), rgba(0,0,0,.25) 55%, rgba(0,0,0,.5));
+}
+ 
+.project-hero-content {
+    position: relative;
+    z-index: 1;
+    max-width: 800px;
+}
+ 
+.project-hero-content h1 {
+    margin-top: 14px;
+    font-size: clamp(48px, 8vw, 90px);
+    letter-spacing: -1px;
+}
+ 
+/* LOGLINE */
+ 
+.project-logline-section {
+    max-width: 700px;
+    margin: 0 auto;
+    padding: 80px 40px 0;
+    text-align: center;
+}
+ 
+.project-logline {
+    font-family: "Playfair Display", serif;
+    font-size: 24px;
+    font-style: italic;
+    font-weight: 400;
+    line-height: 1.4;
+    color: white;
+}
+ 
+/* META TAGS */
+ 
+.project-meta-section {
+    padding: 40px 40px 0;
+    display: flex;
+    justify-content: center;
+}
+ 
+.project-meta-list {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 40px;
+}
+ 
+.project-meta-list li {
+    font-size: 14px;
+    text-align: center;
+}
+ 
+.project-meta-list li span {
+    display: block;
+    color: var(--accent-color);
+    font-size: 11px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-bottom: 6px;
+}
+ 
+/* SYNOPSIS */
+ 
+.project-synopsis-section {
+    max-width: 700px;
+    margin: 0 auto;
+    padding: 70px 40px;
+    text-align: center;
+}
+ 
+.project-synopsis {
+    font-size: 15px;
+    line-height: 1.8;
+    color: #cfcfcf;
+}
+ 
+/* MOOD BOARD */
+ 
+.mood-board-section {
+    padding: 40px 60px 100px;
+}
+ 
+.mood-board-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+ 
+.mood-board-grid img {
+    width: 100%;
+    aspect-ratio: 4 / 5;
+    object-fit: cover;
+    transition: transform .5s ease;
+}
+ 
+.mood-board-grid img:hover {
+    transform: scale(1.03);
+}
+ 
+/* CHARACTERS */
+ 
+.characters-section {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 40px 40px 100px;
+}
+ 
+.character-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 40px;
+}
+ 
+.character-card h4 {
+    font-family: "Playfair Display", serif;
+    font-size: 22px;
+    font-weight: 400;
+    margin-bottom: 10px;
+}
+ 
+.character-card p {
+    font-size: 14px;
+    line-height: 1.7;
+    color: #cfcfcf;
+}
+ 
+/* CREATIVE TEAM */
+ 
+.team-section {
+    max-width: 700px;
+    margin: 0 auto;
+    padding: 40px 40px 100px;
+}
+ 
+.team-list {
+    list-style: none;
+}
+ 
+.team-list li {
+    display: flex;
+    justify-content: space-between;
+    padding: 14px 0;
+    border-bottom: 1px solid rgba(255, 255, 255, .06);
+    font-size: 15px;
+}
+ 
+.team-role {
+    color: var(--accent-color);
+    font-size: 12px;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+}
+ 
+/* STATUS / TIMELINE */
+ 
+.timeline-section {
+    max-width: 700px;
+    margin: 0 auto;
+    padding: 40px 40px 100px;
+}
+ 
+.timeline-list {
+    list-style: none;
+}
+ 
+.timeline-list li {
+    padding: 14px 0;
+    border-bottom: 1px solid rgba(255, 255, 255, .06);
+    font-size: 14px;
+    color: #cfcfcf;
+}
+ 
+.timeline-list li span {
+    display: inline-block;
+    min-width: 160px;
+    color: var(--accent-color);
+    font-size: 12px;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+}
  
 /* MOBILE */
  
