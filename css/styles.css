@@ -450,15 +450,72 @@ footer {
 
 }
 
-
-/* =========================================
-   ACTRESS PAGE ADDITIONS
-   Append this block to the end of css/styles.css
-   Reuses existing variables/fonts — no new dependencies
-   ========================================= */
-
+/* SMOOTH ANCHOR SCROLLING for nav links (filmmaking section + footer) */
+ 
+html {
+    scroll-behavior: smooth;
+}
+ 
+/* Offsets the jump so the fixed header doesn't cover the top of the section */
+#filmmaking,
+#footer {
+    scroll-margin-top: 90px;
+}
+ 
+/* HOMEPAGE FILMMAKER SECTION — clickable project poster grid */
+/* Add id="filmmaking" to the existing <section class="portfolio-section filmmaker-section"> on index.html */
+ 
+.project-cards-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 40px;
+}
+ 
+.project-card {
+    position: relative;
+    display: block;
+    aspect-ratio: 16 / 9;
+    overflow: hidden;
+    text-decoration: none;
+    color: inherit;
+}
+ 
+.project-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform .6s ease;
+}
+ 
+.project-card:hover img {
+    transform: scale(1.05);
+}
+ 
+.project-card-overlay {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    padding: 24px 26px;
+    background: linear-gradient(to top, rgba(0,0,0,.85), rgba(0,0,0,0) 80%);
+}
+ 
+.project-card-overlay h4 {
+    font-family: "Playfair Display", serif;
+    font-size: 26px;
+    font-weight: 400;
+}
+ 
+.project-card-overlay p {
+    margin-top: 6px;
+    font-size: 12px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--accent-color);
+}
+ 
 /* RESUME HEADER: headshot gallery left / comp card right */
-
+ 
 .resume-header {
     display: flex;
     align-items: center;
@@ -467,49 +524,49 @@ footer {
     padding: 160px 40px 100px;
     flex-wrap: wrap;
 }
-
+ 
 .headshot-gallery-side {
     flex: 1 1 420px;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 16px;
 }
-
+ 
 .headshot-gallery-side img {
     width: 100%;
     aspect-ratio: 3 / 4;
     object-fit: cover;
     transition: transform .5s ease;
 }
-
+ 
 .headshot-gallery-side img:hover {
     transform: scale(1.03);
 }
-
+ 
 .headshot-gallery-side img:nth-child(5) {
     grid-column: 1 / -1;
     aspect-ratio: 16 / 9;
 }
-
+ 
 .comp-card {
     flex: 1 1 300px;
     max-width: 360px;
 }
-
+ 
 .comp-card h1 {
     font-family: "Playfair Display", serif;
     font-size: clamp(48px, 6vw, 72px);
     font-weight: 400;
     letter-spacing: -1px;
 }
-
+ 
 .page-hero-tagline {
     margin-top: 16px;
     color: var(--accent-color);
     font-size: 14px;
     letter-spacing: 2px;
 }
-
+ 
 .comp-card-details {
     list-style: none;
     margin-top: 35px;
@@ -517,12 +574,12 @@ footer {
     flex-direction: column;
     gap: 14px;
 }
-
+ 
 .comp-card-details li {
     font-size: 15px;
     letter-spacing: .5px;
 }
-
+ 
 .comp-card-details li span {
     display: block;
     color: var(--accent-color);
@@ -531,9 +588,9 @@ footer {
     text-transform: uppercase;
     margin-bottom: 4px;
 }
-
+ 
 /* SHARED SECTION LABEL */
-
+ 
 .section-label {
     font-family: "Montserrat", sans-serif;
     font-size: 14px;
@@ -543,16 +600,16 @@ footer {
     text-align: center;
     margin-bottom: 50px;
 }
-
+ 
 /* BIOGRAPHY */
-
+ 
 .bio-section {
     max-width: 700px;
     margin: 0 auto;
     padding: 60px 40px 120px;
     text-align: center;
 }
-
+ 
 .bio-oneliner {
     font-family: "Playfair Display", serif;
     font-size: 24px;
@@ -561,45 +618,45 @@ footer {
     line-height: 1.4;
     color: white;
 }
-
+ 
 .bio-body {
     margin-top: 28px;
     font-size: 15px;
     line-height: 1.8;
     color: #cfcfcf;
 }
-
+ 
 .bio-availability {
     margin-top: 28px;
     font-size: 14px;
     letter-spacing: .5px;
     color: var(--accent-color);
 }
-
+ 
 .bio-availability a {
     color: white;
     text-decoration: underline;
     text-underline-offset: 3px;
     transition: color .3s ease;
 }
-
+ 
 .bio-availability a:hover {
     color: var(--accent-color);
 }
-
+ 
 /* SHOWREEL */
-
+ 
 .showreel-section {
     padding: 80px 60px;
 }
-
+ 
 .video-wrapper {
     position: relative;
     max-width: 900px;
     margin: 0 auto;
     aspect-ratio: 16 / 9;
 }
-
+ 
 .video-wrapper iframe {
     position: absolute;
     top: 0;
@@ -608,19 +665,19 @@ footer {
     height: 100%;
     border: none;
 }
-
+ 
 /* CREDITS */
-
+ 
 .credits-section {
     padding: 80px 60px 140px;
     max-width: 900px;
     margin: 0 auto;
 }
-
+ 
 .credits-group {
     margin-bottom: 50px;
 }
-
+ 
 .credits-category {
     font-family: "Playfair Display", serif;
     font-size: 24px;
@@ -629,11 +686,11 @@ footer {
     border-bottom: 1px solid rgba(255, 255, 255, .08);
     padding-bottom: 12px;
 }
-
+ 
 .credits-list {
     list-style: none;
 }
-
+ 
 .credits-list li {
     display: flex;
     justify-content: space-between;
@@ -642,7 +699,7 @@ footer {
     border-bottom: 1px solid rgba(255, 255, 255, .04);
     font-size: 15px;
 }
-
+ 
 .credit-title {
     font-weight: 500;
     flex: 1;
@@ -650,22 +707,62 @@ footer {
     color: inherit;
     transition: color .3s ease;
 }
-
+ 
 .credit-title:hover {
     color: var(--accent-color);
 }
-
+ 
 .credit-role {
     flex: 1;
     color: var(--accent-color);
     text-align: center;
 }
-
+ 
 .credit-year {
     width: 60px;
     text-align: right;
     color: rgba(242, 242, 242, .5);
 }
+ 
+/* MOBILE */
+ 
+@media (max-width: 768px) {
+ 
+    .resume-header {
+        flex-direction: column;
+        padding-top: 120px;
+        gap: 40px;
+    }
+ 
+    .headshot-gallery-side {
+        width: 100%;
+    }
+ 
+    .gallery-grid,
+    .project-cards-grid {
+        grid-template-columns: 1fr;
+    }
+ 
+    .credits-list li {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 4px;
+    }
+ 
+    .credit-year {
+        width: auto;
+        text-align: left;
+    }
+ 
+    .headshot-gallery,
+    .showreel-section,
+    .credits-section {
+        padding-left: 24px;
+        padding-right: 24px;
+    }
+ 
+}
+ 
 
 /* MOBILE */
 
@@ -681,8 +778,14 @@ footer {
         width: 100%;
     }
 
-    .gallery-grid {
+    .gallery-grid,
+    .project-cards-grid {
         grid-template-columns: 1fr;
+    }
+
+    .projects-showcase {
+        padding-left: 24px;
+        padding-right: 24px;
     }
 
     .credits-list li {
