@@ -36,7 +36,7 @@
             </button>
 
             <div class="nav-links">
-                <a href="actress.html">actress</a>
+                <a href="acting.html">acting</a>
                 <a href="filmmaker.html">filmmaker</a>
                 <a href="about.html">about</a>
                 <a href="contact.html">contact</a>
@@ -47,53 +47,41 @@
 
     <main>
 
-        <!-- PAGE INTRO -->
-        <section class="page-hero">
+        <!-- RESUME-STYLE HEADER: headshot gallery left / comp card right -->
+        <section class="resume-header">
 
-            <div class="page-hero-content">
+            <div class="headshot-gallery-side">
+                <!-- STAND-IN: swap filenames for your 5 headshots -->
+                <img src="images/character.jpg" alt="Lisa Barbera headshot 1">
+                <img src="images/theatrical.jpg" alt="Lisa Barbera headshot 2">
+                <img src="images/commercial.jpg" alt="Lisa Barbera headshot 3">
+                <img src="images/femme.jpg" alt="Lisa Barbera headshot 4">
+            </div>
+
+            <div class="comp-card">
                 <h1>acting</h1>
                 <p class="page-hero-tagline">FILM • TELEVISION • THEATRE • COMMERCIAL</p>
 
-                <!-- STAND-IN: your intro blurb, same lowercase italic voice as the homepage director statement -->
-                <p class="page-hero-blurb">
-                Lisa is a versatile actress who gravitates towards coming-of-age stories and nuanced characters. After moving to Vancouver in 2025 from France, she studied her craft in a full-time program for one year, and continues to work on her skills every occasion she gets. She is always looking for new ways to challenge herself as an artist. 
-                
-                Lisa is currently unrepresented and is available for auditions and bookings.
-                </p>
+                <ul class="comp-card-details">
+                    <li><span>age range</span>18-30</li>
+                    <li><span>location</span>Vancouver, BC</li>
+                    <li><span>height</span>5ft. 6in.</li>
+                    <li><span>dress/pants size</span>4-6</li>
+                </ul>
             </div>
 
         </section>
 
-        <!-- HEADSHOT GALLERY -->
-        <section class="headshot-gallery">
+        <!-- BIOGRAPHY -->
+        <section class="bio-section">
 
-            <h3 class="section-label">headshots</h3>
+            <h3 class="section-label">about</h3>
 
-            <div class="gallery-grid">
+            <p class="bio-oneliner">Lisa is a versatile actor drawn to coming-of-age stories and nuanced, character-driven work.</p>
 
-                <!-- STAND-IN: repeat/edit this figure block for each headshot -->
+            <p class="bio-body">After moving to Vancouver from France in 2025, she trained full-time for a year, working with instructors including Peter New, Tasya Teles, Cassidy Bot-Devire, and David C. Jones. She continues to train and is always looking for new ways to challenge herself and grow as an artist.</p>
 
-                <figure class="gallery-item">
-                    <img src="images/character.jpg" alt="Lisa Barbera character headshot">
-                    <figcaption>character</figcaption>
-                </figure>
-
-                <figure class="gallery-item">
-                    <img src="images/theatrical.jpg" alt="Lisa Barbera theatrical headshot">
-                    <figcaption>theatrical</figcaption>
-                </figure>
-
-                <figure class="gallery-item">
-                    <img src="images/femme.jpg" alt="Lisa Barbera femme fatale headshot">
-                    <figcaption>character</figcaption>
-                </figure>
-
-                <figure class="gallery-item">
-                    <img src="images/commercial.jpg" alt="Lisa Barbera commercial headshot">
-                    <figcaption>commercial</figcaption>
-                </figure>
-
-            </div>
+            <p class="bio-availability">Currently unrepresented and available for auditions and bookings — <a href="mailto:actorlisabarbera@gmail.com">contact me</a>.</p>
 
         </section>
 
@@ -103,7 +91,6 @@
             <h3 class="section-label">showreel</h3>
 
             <div class="video-wrapper">
-                <!-- STAND-IN: replace YOUR_VIDEO_ID with your YouTube video ID -->
                 <iframe
                     src="https://www.youtube.com/watch?v=vRxKlr5rfeE"
                     title="Lisa Barbera showreel"
@@ -126,41 +113,39 @@
 
                 <ul class="credits-list">
                     <!-- STAND-IN: repeat this li for each credit — Title / Role / Year -->
+                    <!-- Put the link in href. If a credit has no link yet, delete the <a> tags and leave the title as plain text -->
                     <li>
-                        <a class="credit-title" href="https://example.com" target="_blank" rel="noopener">The Story I Drew Of Him</a>
+                        <a class="credit-title" href="https://example.com" target="_blank" rel="noopener">The Story I Drew of Him</a>
+                        <span class="credit-director">Akshay Tamogana</span>
                         <span class="credit-role">Supporting</span>
                         <span class="credit-year">2026</span>
                     </li>
                     <li>
                         <a class="credit-title" href="https://www.youtube.com/watch?v=RJeeRJkY7XY" target="_blank" rel="noopener">Sense of Loss</a>
+                        <span class="credit-director">Darien Romani</span>
                         <span class="credit-role">Supporting</span>
                         <span class="credit-year">2026</span>
                     </li>
-
                     <li>
-                        <a class="credit-title" href="https://example.com" target="_blank" rel="noopener">Intercut</a>
+                        <a class="credit-title" href="https://www.youtube.com/" target="_blank" rel="noopener">Intercut</a>
+                        <span class="credit-director">Ray Raghavan, Greg Ng</span>
                         <span class="credit-role">Principal</span>
-                        <span class="credit-year">2026</span>
-                    </li>
-
-                    <li>
-                        <a class="credit-title" href="https://example.com" target="_blank" rel="noopener">Teen Commandments</a>
-                        <span class="credit-role">Sarah, Principal</span>
                         <span class="credit-year">2026</span>
                     </li>
                 </ul>
 
             </div>
-<!-- add once credits are available
+
+ <!--      ADD LATER WHEN I HAVE CREDITS     
             <div class="credits-group">
 
                 <h4 class="credits-category">television</h4>
 
                 <ul class="credits-list">
                     <li>
-                        <span class="credit-title">[Show Title]</span>
-                        <span class="credit-role">[Role]</span>
-                        <span class="credit-year">[Year]</span>
+                        <a class="credit-title" href="https://example.com" target="_blank" rel="noopener">Not Suitable For Work</a>
+                        <span class="credit-role">Supporting</span>
+                        <span class="credit-year">2026</span>
                     </li>
                 </ul>
 
@@ -172,14 +157,15 @@
 
                 <ul class="credits-list">
                     <li>
-                        <span class="credit-title">[Brand / Campaign]</span>
-                        <span class="credit-role">[Role]</span>
-                        <span class="credit-year">[Year]</span>
+                        <a class="credit-title" href="https://example.com" target="_blank" rel="noopener">Coca-Cola</a>
+                        <span class="credit-role">Lead</span>
+                        <span class="credit-year">2026</span>
                     </li>
                 </ul>
 
             </div>
-        -->
+-->
+
         </section>
 
     </main>
@@ -196,12 +182,16 @@
 
         <nav class="footer-links">
 
-            <a href="#">instagram</a>
+            <a href="https://www.instagram.com/lizabrb/" target="_blank" rel="noopener">instagram</a>
 
-            <a href="#">IMDb</a>
+            <a href="https://www.imdb.com/lisabarbera/" target="_blank" rel="noopener">IMDb</a>
 
-            <a href="mailto:you@email.com">contact</a>
+            <a href="mailto:actorlisabarbera@gmail.com">email</a>
 
+            <a href="https://app.castittalent.com/LISABARBERA" target="_blank" rel="noopener">castit</a>
+
+            <a href="https://resumes.actorsaccess.com/lisabarbera" target="_blank" rel="noopener">actor's access</a>
+            
         </nav>
 
     </footer>

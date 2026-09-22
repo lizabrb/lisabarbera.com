@@ -13,6 +13,7 @@ body {
     color: #f2f2f2;
     font-family: "Montserrat", sans-serif;
 }
+
 h1, h2 {
     font-family: "Playfair Display", serif;
     font-weight: 400;
@@ -21,7 +22,6 @@ h1, h2 {
 /* NAVIGATION */
 
 .site-header{
-
     position: fixed;
     top: 0;
     left: 0;
@@ -30,32 +30,25 @@ h1, h2 {
     transition:
         background-color .35s ease,
         backdrop-filter .35s ease;
-
 }
 
 header nav{
-
     width: 100%;
     padding: 16px 60px;
     display:flex;
     justify-content:space-between;
     align-items:center;
     transition:padding .35s ease;
-
 }
 
 .site-header.scrolled{
-
     background:rgba(10,10,10,.18);
     backdrop-filter:blur(6px);
     -webkit-backdrop-filter:blur(6px);
-
 }
 
 .site-header.scrolled nav{
-
     padding: 16px 30px;
-
 }
 
 .logo img {
@@ -69,23 +62,17 @@ header nav{
 }
 
 .nav-links a {
-
     position: relative;
-
     display: inline-block;
-
     padding: 6px 0;
-
     color: var(--accent-color);
     text-decoration: none;
     font-size: 14px;
     font-weight: 300;
     letter-spacing: 0.5px;
-
 }
 
 .nav-links a::after{
-
     content:"";
     position:absolute;
     left:0;
@@ -94,13 +81,10 @@ header nav{
     height:1px;
     background:var(--accent-color);
     transition:width .3s ease;
-
 }
 
 .nav-links a:hover::after{
-
     width:100%;
-
 }
 
 /* HAMBURGER */
@@ -118,88 +102,6 @@ header nav{
     height: 1px;
     background: var(--accent-color);
     margin: 6px 0;
-}
-
-
-/* MOBILE */
-
-@media (max-width:768px) {
-
-    header nav{
-    padding:20px 18px;  
-    }
-
-    .logo img {
-        width: 110px;
-    }
-
-    .menu-toggle {
-        display: block;
-    }
-
-    .nav-links {
-        position: absolute;
-        top: 90px;
-        left: 0;
-        width: 100%;
-        background: rgba(10, 10, 10, .45);
-        backdrop-filter: blur(18px);
-        -webkit-backdrop-filter: blur(18px);
-        flex-direction: column;
-        align-items: center;
-        gap: 25px;
-        padding: 40px 0;
-        display: none;
-    }
-
-    .nav-links.active {
-        display: flex;
-    }
-
-    .nav-links a {
-        font-size: 14px;
-    }
-
-    .hero h1 {
-        font-size: 52px;
-        line-height: 0.95;
-        letter-spacing: -1px;
-    }
-
-    .hero p {
-    font-size: 13px;
-    letter-spacing: 1.5px;
-    }
-
-    .hero {
-        padding: 0 24px;
-        background-image:
-        linear-gradient(
-            rgba(0,0,0,.82),
-            rgba(0,0,0,.45),
-            rgba(0,0,0,.78)
-        ),
-        url("../images/hero.jpg");
-    }
-
-    .hero-content{
-        transform: translateY(50px);
-    }
-
-    .projects-grid{
-        grid-template-columns:1fr;
-        gap:40px;
-    }
-
-    .current-projects{
-        max-width:100%;
-    }
-
-    .project p{
-        margin-left:75px;
-        letter-spacing:2px;
-    }
-
 }
 
 /* HERO */
@@ -431,7 +333,6 @@ footer {
     text-align:center;
 }
 
-
 .footer-name {
     font-family:"Montserrat", serif;
     font-size:18px;
@@ -439,7 +340,6 @@ footer {
     letter-spacing:0px;
     margin-bottom:1px;
 }
-
 
 .footer-role {
     color:var(--accent-color);
@@ -450,13 +350,11 @@ footer {
     margin-bottom:15px;
 }
 
-
 .footer-links {
     display:flex;
     justify-content:center;
     gap:35px;
 }
-
 
 .footer-links a {
     color:#f2f2f2;
@@ -467,60 +365,175 @@ footer {
     transition:color .3s ease;
 }
 
-
 .footer-links a:hover {
     color:var(--accent-color);
 }
+
+/* MOBILE */
+
+@media (max-width:768px) {
+
+    header nav{
+    padding:20px 18px;  
+    }
+
+    .logo img {
+        width: 110px;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    .nav-links {
+        position: absolute;
+        top: 90px;
+        left: 0;
+        width: 100%;
+        background: rgba(10, 10, 10, .45);
+        backdrop-filter: blur(18px);
+        -webkit-backdrop-filter: blur(18px);
+        flex-direction: column;
+        align-items: center;
+        gap: 25px;
+        padding: 40px 0;
+        display: none;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .nav-links a {
+        font-size: 14px;
+    }
+
+    .hero h1 {
+        font-size: 52px;
+        line-height: 0.95;
+        letter-spacing: -1px;
+    }
+
+    .hero p {
+    font-size: 13px;
+    letter-spacing: 1.5px;
+    }
+
+    .hero {
+        padding: 0 24px;
+        background-image:
+        linear-gradient(
+            rgba(0,0,0,.82),
+            rgba(0,0,0,.45),
+            rgba(0,0,0,.78)
+        ),
+        url("../images/hero.jpg");
+    }
+
+    .hero-content{
+        transform: translateY(50px);
+    }
+
+    .projects-grid{
+        grid-template-columns:1fr;
+        gap:40px;
+    }
+
+    .current-projects{
+        max-width:100%;
+    }
+
+    .project p{
+        margin-left:75px;
+        letter-spacing:2px;
+    }
+
+}
+
 
 /* =========================================
    ACTRESS PAGE ADDITIONS
    Append this block to the end of css/styles.css
    Reuses existing variables/fonts — no new dependencies
    ========================================= */
- 
-/* PAGE HERO (used on inner pages instead of the full-bleed homepage hero) */
- 
-.page-hero {
-    min-height: 60vh;
+
+/* RESUME HEADER: headshot gallery left / comp card right */
+
+.resume-header {
     display: flex;
-    justify-content: center;
     align-items: center;
-    text-align: center;
-    padding: 160px 30px 100px;
+    gap: 70px;
+    min-height: 100vh;
+    padding: 160px 40px 100px;
+    flex-wrap: wrap;
 }
- 
-.page-hero-content {
-    max-width: 800px;
+
+.headshot-gallery-side {
+    flex: 1 1 420px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
 }
- 
-.page-hero h1 {
+
+.headshot-gallery-side img {
+    width: 100%;
+    aspect-ratio: 3 / 4;
+    object-fit: cover;
+    transition: transform .5s ease;
+}
+
+.headshot-gallery-side img:hover {
+    transform: scale(1.03);
+}
+
+.headshot-gallery-side img:nth-child(5) {
+    grid-column: 1 / -1;
+    aspect-ratio: 16 / 9;
+}
+
+.comp-card {
+    flex: 1 1 300px;
+    max-width: 360px;
+}
+
+.comp-card h1 {
     font-family: "Playfair Display", serif;
-    font-size: clamp(60px, 10vw, 120px);
+    font-size: clamp(48px, 6vw, 72px);
     font-weight: 400;
-    letter-spacing: -2px;
+    letter-spacing: -1px;
 }
- 
+
 .page-hero-tagline {
-    margin-top: 20px;
+    margin-top: 16px;
     color: var(--accent-color);
     font-size: 14px;
     letter-spacing: 2px;
 }
- 
-.page-hero-blurb {
-    margin: 30px auto 0;
-    max-width: 620px;
-    font-family: "Playfair Display", serif;
-    font-size: 20px;
-    font-style: italic;
-    font-weight: 400;
-    line-height: 1.4;
-    color: white;
-    text-transform: lowercase;
+
+.comp-card-details {
+    list-style: none;
+    margin-top: 35px;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
 }
- 
+
+.comp-card-details li {
+    font-size: 15px;
+    letter-spacing: .5px;
+}
+
+.comp-card-details li span {
+    display: block;
+    color: var(--accent-color);
+    font-size: 11px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-bottom: 4px;
+}
+
 /* SHARED SECTION LABEL */
- 
+
 .section-label {
     font-family: "Montserrat", sans-serif;
     font-size: 14px;
@@ -530,54 +543,63 @@ footer {
     text-align: center;
     margin-bottom: 50px;
 }
- 
-/* HEADSHOT GALLERY */
- 
-.headshot-gallery {
-    padding: 80px 60px;
-}
- 
-.gallery-grid {
-    display: grid;
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-    gap: 40px;
-    max-width: 1200px;
+
+/* BIOGRAPHY */
+
+.bio-section {
+    max-width: 700px;
     margin: 0 auto;
-}
- 
-.gallery-item img {
-    width: 100%;
-    height: 420px;
-    object-fit: cover;
-    transition: transform .6s ease;
-}
- 
-.gallery-item:hover img {
-    transform: scale(1.04);
-}
- 
-.gallery-item figcaption {
-    margin-top: 14px;
+    padding: 60px 40px 120px;
     text-align: center;
-    font-size: 12px;
-    letter-spacing: 2px;
-    text-transform: lowercase;
+}
+
+.bio-oneliner {
+    font-family: "Playfair Display", serif;
+    font-size: 24px;
+    font-style: italic;
+    font-weight: 400;
+    line-height: 1.4;
+    color: white;
+}
+
+.bio-body {
+    margin-top: 28px;
+    font-size: 15px;
+    line-height: 1.8;
+    color: #cfcfcf;
+}
+
+.bio-availability {
+    margin-top: 28px;
+    font-size: 14px;
+    letter-spacing: .5px;
     color: var(--accent-color);
 }
- 
+
+.bio-availability a {
+    color: white;
+    text-decoration: underline;
+    text-underline-offset: 3px;
+    transition: color .3s ease;
+}
+
+.bio-availability a:hover {
+    color: var(--accent-color);
+}
+
 /* SHOWREEL */
- 
+
 .showreel-section {
     padding: 80px 60px;
 }
- 
+
 .video-wrapper {
     position: relative;
     max-width: 900px;
     margin: 0 auto;
     aspect-ratio: 16 / 9;
 }
- 
+
 .video-wrapper iframe {
     position: absolute;
     top: 0;
@@ -586,19 +608,19 @@ footer {
     height: 100%;
     border: none;
 }
- 
+
 /* CREDITS */
- 
+
 .credits-section {
     padding: 80px 60px 140px;
     max-width: 900px;
     margin: 0 auto;
 }
- 
+
 .credits-group {
     margin-bottom: 50px;
 }
- 
+
 .credits-category {
     font-family: "Playfair Display", serif;
     font-size: 24px;
@@ -607,11 +629,11 @@ footer {
     border-bottom: 1px solid rgba(255, 255, 255, .08);
     padding-bottom: 12px;
 }
- 
+
 .credits-list {
     list-style: none;
 }
- 
+
 .credits-list li {
     display: flex;
     justify-content: space-between;
@@ -620,7 +642,7 @@ footer {
     border-bottom: 1px solid rgba(255, 255, 255, .04);
     font-size: 15px;
 }
- 
+
 .credit-title {
     font-weight: 500;
     flex: 1;
@@ -632,44 +654,53 @@ footer {
 .credit-title:hover {
     color: var(--accent-color);
 }
- 
+
 .credit-role {
     flex: 1;
     color: var(--accent-color);
     text-align: center;
 }
- 
+
 .credit-year {
     width: 60px;
     text-align: right;
     color: rgba(242, 242, 242, .5);
 }
- 
+
 /* MOBILE */
- 
+
 @media (max-width: 768px) {
- 
+
+    .resume-header {
+        flex-direction: column;
+        padding-top: 120px;
+        gap: 40px;
+    }
+
+    .headshot-gallery-side {
+        width: 100%;
+    }
+
     .gallery-grid {
         grid-template-columns: 1fr;
     }
- 
+
     .credits-list li {
         flex-direction: column;
         align-items: flex-start;
         gap: 4px;
     }
- 
+
     .credit-year {
         width: auto;
         text-align: left;
     }
- 
+
     .headshot-gallery,
     .showreel-section,
     .credits-section {
         padding-left: 24px;
         padding-right: 24px;
     }
- 
+
 }
- 
