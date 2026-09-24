@@ -164,85 +164,65 @@ header nav{
 /* PORTFOLIO SECTION */
 
 .portfolio-section {
-
-    min-height:80vh;
-    padding:140px 80px;
+    min-height:auto;
+    padding:80px 80px;
     display:flex;
     justify-content:center;
     align-items:center;
     text-align:center;
-
 }
 
 .section-content h2 {
-
     font-family:"Playfair Display", serif;
     font-size:clamp(60px, 10vw, 120px);
     font-weight:400;
     letter-spacing:-3px;
-
 }
 
 .section-content p {
-
     margin-top:20px;
     color:var(--accent-color);
     letter-spacing:0px;
-
 }
 
 .section-content a {
-
     display:inline-block;
     margin-top:50px;
     color:white;
     text-decoration:none;
     font-size:14px;
-
 }
 
 /* ACTRESS SECTION */
 
 .actress-section {
-
     display:flex;
     justify-content:center;
     align-items:center;
     gap:60px;
-
 }
 
 .actress-image{
-
     overflow:hidden;
-
 }
 
 .actress-image img {
-
     width:220px;
     height:330px;
     object-fit:cover;
      transition:transform .6s ease;
-
 }
 
 .actress-image:hover img{
-
     transform:scale(1.04);
-
 }
 
 .actress-image.left {
-
     transform:translateY(-40px);
-
 }
 
 .actress-image.right {
-
     transform:translateY(40px);
-
 }
 
 /* FILMMAKER SECTION */
@@ -260,6 +240,17 @@ header nav{
     font-weight: 400;
     line-height: 1.4;
     color: white!important;
+    text-transform: lowercase;
+}
+
+.blurb {
+    margin: 35px auto;
+    max-width: 620px;
+    font-family: "Montserrat", serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.4;
+    color: var(--accent-color);
     text-transform: lowercase;
 }
 
@@ -328,8 +319,8 @@ header nav{
 
 footer {
     border-top:1px solid rgba(255,255,255,.08);
-    margin-top:120px;
-    padding:80px 60px;
+    margin-top:60px;
+    padding:50px 60px;
     text-align:center;
 }
 
@@ -598,7 +589,7 @@ html {
     text-transform: uppercase;
     color: var(--accent-color);
     text-align: center;
-    margin-bottom: 50px;
+    margin-bottom: 25px;
 }
  
 /* BIOGRAPHY */
@@ -606,7 +597,7 @@ html {
 .bio-section {
     max-width: 700px;
     margin: 0 auto;
-    padding: 60px 40px 120px;
+    padding: 30px 40px 120px;
     text-align: center;
 }
  
@@ -647,7 +638,7 @@ html {
 /* SHOWREEL */
  
 .showreel-section {
-    padding: 80px 60px;
+    padding: 30px 60px;
 }
  
 .video-wrapper {
@@ -665,11 +656,35 @@ html {
     height: 100%;
     border: none;
 }
+
+/* VOICE OVER REELS */
+
+.vo-reels-section {
+    max-width: 700px;
+    margin: 0 auto;
+    padding: 20px 40px 100px;
+}
+
+.vo-reel {
+    margin-bottom: 34px;
+}
+
+.vo-reel-label {
+    font-size: 12px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--accent-color);
+    margin-bottom: 10px;
+}
+
+.vo-reel audio {
+    width: 100%;
+}
  
 /* CREDITS */
  
 .credits-section {
-    padding: 80px 60px 140px;
+    padding: 30px 60px 140px;
     max-width: 900px;
     margin: 0 auto;
 }
@@ -844,17 +859,15 @@ html {
  
 .mood-board-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 20px;
-    max-width: 1200px;
-    margin: 0 auto;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
 }
- 
+
 .mood-board-grid img {
     width: 100%;
-    aspect-ratio: 4 / 5;
+    min-width: 0;
+    aspect-ratio: 3 / 2;
     object-fit: cover;
-    transition: transform .5s ease;
 }
  
 .mood-board-grid img:hover {
@@ -915,34 +928,6 @@ html {
     text-transform: uppercase;
 }
  
-/* STATUS / TIMELINE */
- 
-.timeline-section {
-    max-width: 700px;
-    margin: 0 auto;
-    padding: 40px 40px 100px;
-}
- 
-.timeline-list {
-    list-style: none;
-}
- 
-.timeline-list li {
-    padding: 14px 0;
-    border-bottom: 1px solid rgba(255, 255, 255, .06);
-    font-size: 14px;
-    color: #cfcfcf;
-}
- 
-.timeline-list li span {
-    display: inline-block;
-    min-width: 160px;
-    color: var(--accent-color);
-    font-size: 12px;
-    letter-spacing: 1.5px;
-    text-transform: uppercase;
-}
- 
 /* MOBILE */
  
 @media (max-width: 768px) {
@@ -981,9 +966,6 @@ html {
     }
  
 }
- 
-
-/* MOBILE */
 
 @media (max-width: 768px) {
 
