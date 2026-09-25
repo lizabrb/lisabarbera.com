@@ -19,6 +19,27 @@ h1, h2 {
     font-weight: 400;
 }
 
+@font-face {
+    font-family: "Bryndan Write";
+    src: url("../fonts/BryndanWrite.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Zentura";
+    src: url("../fonts/Zentura.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Mirosela";
+    src: url("../fonts/Mirosela.otf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+}
+
 /* NAVIGATION */
 
 .site-header{
@@ -786,6 +807,24 @@ html {
     margin-top: 14px;
     font-size: clamp(48px, 8vw, 90px);
     letter-spacing: -1px;
+}
+
+.handwritten-title {
+    font-family: "Bryndan Write", serif;
+    font-weight: normal;
+    font-size: clamp(56px, 9vw, 100px);
+}
+
+.project-hero-content h1.mc-title {
+    font-family: "Zentura", "Playfair Display", serif;
+    font-weight: normal;
+    font-size: clamp(100px, 5vw, 60px);
+}
+
+.project-hero-content h1.mirosela-title {
+    font-family: "Mirosela", "Playfair Display", serif;
+    font-weight: normal;
+    font-size: clamp(130px, 5vw, 60px);
 }
  
 /* LOGLINE */
