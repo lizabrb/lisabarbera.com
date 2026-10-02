@@ -907,6 +907,13 @@ html {
     line-height: 1.8;
     color: #cfcfcf;
 }
+
+.project-line {
+    font-size: 15px;
+    font-weight: 800;
+    line-height: 1.8;
+    color: var(--accent-color);
+}
  
 /* MOOD BOARD */
  
