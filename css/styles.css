@@ -848,14 +848,14 @@ html {
 /* ANNOUNCEMENT */
  
 .project-announcement-section {
-    margin: 35px auto;
     max-width: 620px;
+    margin: 35px auto;
     font-family: "Playfair Display", serif;
     font-size: 20px;
     font-style: italic;
     font-weight: 400;
     line-height: 1.4;
-    color: white!important;
+    color: var(--accent-color);
     text-transform: lowercase;
 }
  
@@ -902,14 +902,6 @@ html {
     font-size: 15px;
     line-height: 1.8;
     color: #cfcfcf;
-}
-
-.project-line {
-    font-size: 15px;
-    font-weight: 500;
-    font-style: italic;
-    line-height: 1.8;
-    color: var(--accent-color);
 }
  
 /* MOOD BOARD */
