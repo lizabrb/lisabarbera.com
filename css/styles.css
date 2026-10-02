@@ -818,13 +818,13 @@ html {
 .project-hero-content h1.mc-title {
     font-family: "Zentura", "Playfair Display", serif;
     font-weight: normal;
-    font-size: clamp(100px, 5vw, 60px);
+    font-size: clamp(60px, 5vw, 100px);
 }
 
 .project-hero-content h1.mirosela-title {
     font-family: "Mirosela", "Playfair Display", serif;
     font-weight: normal;
-    font-size: clamp(130px, 5vw, 60px);
+    font-size: clamp(60px, 5vw, 130px);
 }
  
 /* LOGLINE */
@@ -847,7 +847,7 @@ html {
 
 /* ANNOUNCEMENT */
  
-.project-announcement {
+.project-announcement-section {
     margin: 35px auto;
     max-width: 620px;
     font-family: "Playfair Display", serif;
@@ -906,7 +906,8 @@ html {
 
 .project-line {
     font-size: 15px;
-    font-weight: 800;
+    font-weight: 500;
+    font-style: italic;
     line-height: 1.8;
     color: var(--accent-color);
 }
@@ -989,43 +990,6 @@ html {
 }
  
 /* MOBILE */
- 
-@media (max-width: 768px) {
- 
-    .resume-header {
-        flex-direction: column;
-        padding-top: 120px;
-        gap: 40px;
-    }
- 
-    .headshot-gallery-side {
-        width: 100%;
-    }
- 
-    .gallery-grid,
-    .project-cards-grid {
-        grid-template-columns: 1fr;
-    }
- 
-    .credits-list li {
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 4px;
-    }
- 
-    .credit-year {
-        width: auto;
-        text-align: left;
-    }
- 
-    .headshot-gallery,
-    .showreel-section,
-    .credits-section {
-        padding-left: 24px;
-        padding-right: 24px;
-    }
- 
-}
 
 @media (max-width: 768px) {
 
