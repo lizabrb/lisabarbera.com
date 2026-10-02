@@ -761,7 +761,7 @@ html {
 }
 
 /* =========================================
-   PROJECT PITCH-DECK PAGES (anniversary.html, etc.)
+   PROJECT PITCH-DECK PAGES
    ========================================= */
  
 .back-link {
@@ -847,20 +847,16 @@ html {
 
 /* ANNOUNCEMENT */
  
-.project-announcement-section {
-    max-width: 700px;
-    margin: 0 auto;
-    padding: 80px 40px 0;
-    text-align: center;
-}
- 
 .project-announcement {
+    margin: 35px auto;
+    max-width: 620px;
     font-family: "Playfair Display", serif;
-    font-size: 24px;
+    font-size: 20px;
     font-style: italic;
     font-weight: 400;
     line-height: 1.4;
-    color: white;
+    color: white!important;
+    text-transform: lowercase;
 }
  
 /* META TAGS */
